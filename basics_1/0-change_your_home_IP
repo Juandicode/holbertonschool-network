@@ -1,3 +1,4 @@
+#!/usr/bin/env
 [shellcheck] Command to run:
 shellcheck 0-change_your_home_IP
 su student_jail -c 'timeout 30 bash -c '"'"'shellcheck 0-change_your_home_IP'"'"''
