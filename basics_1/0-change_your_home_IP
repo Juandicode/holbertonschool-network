@@ -1,14 +1,4 @@
 #!/usr/bin/env bash
-[shellcheck] Command to run:
-shellcheck 0-change_your_home_IP
-su student_jail -c 'timeout 30 bash -c '"'"'shellcheck 0-change_your_home_IP'"'"''
-[shellcheck] Return code: 1
-[shellcheck] Student stdout:
-In 0-change_your_home_IP line 6:
-sudo cat /etc/hosts >> /etc/hosts.new
-                    ^-- SC2024: sudo doesn't affect redirects. Use .. | sudo tee -a file
-For more information:
-  https://www.shellcheck.net/wiki/SC2024 -- sudo doesn't affect redirects. Us...
-[shellcheck] Student stdout length: 265
-[shellcheck] Student stderr:
-[shellcheck] Student stderr length: 0
+# Displays all active IPv4 IPs on the machine it's executed on
+
+ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
