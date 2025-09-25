@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Display listening TCP/UDP sockets with PID/program
+sudo netstat -lpn
